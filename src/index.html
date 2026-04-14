@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/images/logo_nexamed-favicon.webp" type="image/webp">
+</head>
+
+<body>
+    <header class="calc-imc__header">
+        <img class="calc-imc__logo" src="./assets/images/logo_nexamed.webp" alt="logo nexamed" width="250px"
+            height="250px" title="Logo Nexamed">
+        <h1 class="calc-imc__title">Calculadora de Índice de Masa Corporal (IMC)</h1>
+    </header>
+
+    <main class="calc-imc__main">
+        <form class="calc-imc__formulario">
+            <label for="peso">Peso (kg):</label>
+            <input class="calc-imc__input" id="peso" type="number">
+            <label for="altura">Altura (m):</label>
+            <input class="calc-imc__input" id="altura" type="number" step="0.01">
+            <div class="calc-imc__buttons">
+                <button class="calc-imc__button-items" type="submit">Calcular IMC</button>
+                <button class="calc-imc__button-items" type="reset">Limpiar</button>
+            </div>
+        </form>
+
+        <div class="calc-imc__output">
+            <output class="calc-imc__resultado"></output>
+            <output class="calc-imc__peso-ideal"></output>
+        </div>
+
+    </main>
+
+    <footer class="calc-imc__footer">
+        <div class="calc-imc__footer-content">
+
+            <div class="calc-imc__disclaimer">
+                <p><strong>Descargo de responsabilidad:</strong> Esta herramienta tiene fines puramente informativos.
+                    Los resultados no sustituyen el asesoramiento, diagnóstico o tratamiento médico profesional.</p>
+            </div>
+
+            <div class="calc-imc__resources">
+                <h3>Recursos de interés</h3>
+                <ul>
+                    <li><a href="https://www.who.int/es" target="_blank">Organización Mundial de la Salud</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul class="calc-imc__socials">
+                    <h2 class="calc-imc__title">Redes sociales</h2>
+                    <li><a href="https://www.instagram.com/md_gabrielgarcia" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/images/social-icons/instagram.svg" alt="Instagram" width="35px">
+                        </a></li>
+                    <li><a href="https://github.com/medgabrielgarcia-star" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/images/social-icons/github.svg" alt="GitHub" width="35px">
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="calc-imc__copyright">&copy; 2026 Nexamed - Desarrollado por Gabriel García</p>
+    </footer>
+    </div>
+    </footer>
+</body>
+
+</html>
