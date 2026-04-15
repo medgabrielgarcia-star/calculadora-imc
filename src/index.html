@@ -18,19 +18,53 @@
 
     <main class="calc-imc__main">
         <form class="calc-imc__formulario">
-            <label for="peso">Peso (kg):</label>
+            <label for="peso"><span>Peso (kg):</span></label>
             <input class="calc-imc__input" id="peso" type="number">
-            <label for="altura">Altura (m):</label>
-            <input class="calc-imc__input" id="altura" type="number" step="0.01">
+            <label for="altura"><span>Altura (m):</span></label>
+            <input class="calc-imc__input" id="altura" type="number" step="0.1">
             <div class="calc-imc__buttons">
-                <button class="calc-imc__button-items" type="submit">Calcular IMC</button>
-                <button class="calc-imc__button-items" type="reset">Limpiar</button>
+                <button class="calc-imc__button-items calcular" type="submit">Calcular IMC</button>
+                <button class="calc-imc__button-items limpiar" type="reset">Limpiar</button>
             </div>
         </form>
 
-        <div class="calc-imc__output">
-            <output class="calc-imc__resultado"></output>
-            <output class="calc-imc__peso-ideal"></output>
+        <div class="calc-imc__result">
+
+            <svg viewBox="0 30 350 155" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg"
+                class="calc-imc__gauge">
+                <path d="M45 175 A130 130 0 0 1 54.4 125.4 L90.8 140.7 A90 90 0 0 0 85 175Z" fill="#5B9BD5" />
+
+                <path d="M54.4 125.4 A130 130 0 0 1 83.1 83.1 L111.1 111.1 A90 90 0 0 0 90.8 140.7Z" fill="#85C1E9" />
+
+                <path d="M83.1 83.1 A130 130 0 0 1 125.4 54.4 L140.7 90.8 A90 90 0 0 0 111.1 111.1Z" fill="#F9C84A" />
+
+                <path d="M125.4 54.4 A130 130 0 0 1 175 45 L175 85 A90 90 0 0 0 140.7 90.8Z" fill="#F09A36" />
+
+                <path d="M175 45 A130 130 0 0 1 224.6 54.4 L209.3 90.8 A90 90 0 0 0 175 85Z" fill="#E67E22" />
+
+                <path d="M224.6 54.4 A130 130 0 0 1 266.9 83.1 L238.9 111.1 A90 90 0 0 0 209.3 90.8Z" fill="#D35400" />
+
+                <path d="M266.9 83.1 A130 130 0 0 1 305 175 L265 175 A90 90 0 0 0 238.9 111.1Z" fill="#C0392B" />
+
+                <circle cx="175" cy="175" r="18" fill="white" stroke="#ccc" stroke-width="1" />
+                <g id="aguja"
+                    style="transform-origin: 175px 175px; transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1); transform: rotate(-90deg);">
+                    <line x1="175" y1="175" x2="175" y2="52" stroke="#1B4F72" stroke-width="6" stroke-linecap="round" />
+                    <circle cx="175" cy="175" r="10" fill="#1B4F72" />
+                </g>
+
+                <g font-family="sans-serif" font-weight="700" font-size="6.5" text-anchor="middle" fill="white">
+                    <text x="65" y="155">BAJO</text>
+                    <text x="85" y="115">NORMAL</text>
+                    <text x="120" y="85" fill="#7a5c00">SOBRE</text>
+                    <text x="175" y="70" fill="#7a5c00">GRADO I</text>
+                    <text x="230" y="85">GRADO II</text>
+                    <text x="265" y="115">GRADO III</text>
+                    <text x="285" y="155">GRADO IV</text>
+                </g>
+            </svg>
+            <output class="calc-imc__resultado">Tu IMC es: </output>
+            <output class="calc-imc__peso-ideal">Tu peso ideal es: </output>
         </div>
 
     </main>
@@ -39,20 +73,20 @@
         <div class="calc-imc__footer-content">
 
             <div class="calc-imc__disclaimer">
-                <p><strong>Descargo de responsabilidad:</strong> Esta herramienta tiene fines puramente informativos.
-                    Los resultados no sustituyen el asesoramiento, diagnóstico o tratamiento médico profesional.</p>
+                <p><strong>Descargo de responsabilidad:</strong> ⚠️ Esta herramienta es informativa. No reemplaza
+                    evaluación médica.</p>
             </div>
 
             <div class="calc-imc__resources">
-                <h3>Recursos de interés</h3>
+                <p>Recursos de interés</p>
                 <ul>
                     <li><a href="https://www.who.int/es" target="_blank">Organización Mundial de la Salud</a></li>
                 </ul>
             </div>
 
-            <div>
-                <ul class="calc-imc__socials">
-                    <h2 class="calc-imc__title">Redes sociales</h2>
+            <div class="calc-imc__socials">
+                <p class="calc-imc__redes">Redes sociales</p>
+                <ul class="calc-imc__ul">
                     <li><a href="https://www.instagram.com/md_gabrielgarcia" target="_blank" rel="noopener noreferrer">
                             <img src="./assets/images/social-icons/instagram.svg" alt="Instagram" width="35px">
                         </a></li>
@@ -64,7 +98,6 @@
         </div>
         <p class="calc-imc__copyright">&copy; 2026 Nexamed - Desarrollado por Gabriel García</p>
     </footer>
-    </div>
     </footer>
 </body>
 
