@@ -9,5 +9,8 @@
   "keywords": [],
   "author": "Gabriel García Villacís",
   "license": "ISC",
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
