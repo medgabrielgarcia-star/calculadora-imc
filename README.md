@@ -4,7 +4,6 @@
 
 <p align="center">
   <img src="./src/assets/images/Calculadora-imc-grande.png" alt="Nexamed Escritorio" width="600"/>
-  <img src="./src/assets/images/Calculadora-imc-movil.png" alt="Nexamed Móvil" width="200"/>
 </p>
 
 ---
@@ -60,8 +59,8 @@ Basada en los criterios de la Organización Mundial de la Salud (OMS):
 **Gabriel García**
 Médico General · Desarrollador en formación
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/tu-usuario)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/tu-perfil)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/medgabrielgarcia-star)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-marcelo-garcía-villacis-51a0a8239)
 [![Instagram](https://img.shields.io/badge/@md__gabrielgarcia-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/md_gabrielgarcia)
 
 ---
