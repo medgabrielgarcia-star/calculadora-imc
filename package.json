@@ -1,12 +1,17 @@
 {
   "name": "calculadora-imc",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Herramienta de educación en salud que combina lógica médica con una experiencia de usuario dinámica y accesible.",
+  "main": "index.html",
+  "homepage": "https://medgabrielgarcia-star.github.io/calculadora-imc",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d ."
   },
-  "keywords": [],
+  "keywords": [
+    "salud",
+    "medicina",
+    "imc",
+  ],
   "author": "Gabriel García Villacís",
   "license": "ISC",
   "packageManager": "pnpm@10.32.1",
