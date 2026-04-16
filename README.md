@@ -59,7 +59,6 @@ Basada en los criterios de la Organización Mundial de la Salud (OMS):
 **Gabriel García**
 Médico General · Desarrollador en formación
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/medgabrielgarcia-star)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-marcelo-garcía-villacis-51a0a8239)
 [![Instagram](https://img.shields.io/badge/@md__gabrielgarcia-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/md_gabrielgarcia)
 
