@@ -12,6 +12,8 @@
 
 Nexamed es una calculadora de Índice de Masa Corporal (IMC) diseñada con foco en la educación preventiva. Va más allá del simple cálculo numérico: ofrece visualización analógica, retroalimentación personalizada y un asistente virtual que acompaña al usuario con consejos contextuales.
 
+<a href="https://medgabrielgarcia-star.github.io/calculadora-imc/">
+
 ---
 
 ## ✨ Características
