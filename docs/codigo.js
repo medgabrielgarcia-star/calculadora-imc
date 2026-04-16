@@ -7,6 +7,7 @@ const aguja = document.querySelector("#aguja"); // Asegúrate que tu SVG tenga i
 const textoBurbuja = document.querySelector(".calc-imc__burbuja p"); // Selecciona el párrafo dentro de la burbuja
 const burbuja = document.querySelector(".calc-imc__burbuja"); // Selecciona el contenedor de la burbuja
 const botonLimpiar = document.querySelector("button[type='reset']");
+const errorAltura = document.getElementById('error-altura');
 
 // 2. Evento Principal (Calcular)
 formulario.addEventListener("submit", function(event) {
@@ -75,6 +76,35 @@ formulario.addEventListener("submit", function(event) {
         textoBurbuja.textContent = "Por favor, ingresa valores válidos para poder ayudarte.";
     }
 });
+
+// 3. Evento Limpiar (Reset)
+if (botonLimpiar) {
+    botonLimpiar.addEventListener("click", function() {
+        // Devolvemos la aguja al inicio
+        aguja.style.transform = "rotate(-90deg)";
+
+        // Quitamos alertas de la burbuja
+        burbuja.classList.remove("is-invalid");
+
+        // Limpiamos los textos
+        resultado.innerHTML = "";
+        textoBurbuja.textContent = "Introduce tus datos para que pueda darte una recomendación.";
+    });
+}
+
+inputAltura.addEventListener('input', (e) => {
+    const valor = parseFloat(e.target.value);
+
+    // Lógica: Si el usuario escribe más de 3 (ej. 160 cm), avisar
+    if (valor > 3) {
+        errorAltura.textContent = "⚠️ ¿Usaste centímetros? Intenta con metros (ej: 1.70)";
+        inputAltura.classList.add('input-warning');
+    } else {
+        errorAltura.textContent = "";
+        inputAltura.classList.remove('input-warning');
+    }
+});
+
 
 // 3. Evento Limpiar (Reset)
 if (botonLimpiar) {

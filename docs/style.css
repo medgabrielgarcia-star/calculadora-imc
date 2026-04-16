@@ -170,9 +170,11 @@ body{
    box-shadow: 0 4px 12px var(--color-shadow);
 }
 
+
 .calc-imc__formulario span{
     color: var(--color-label);
 }
+
 
 .calc-imc__input{
     width: 80%;
@@ -182,6 +184,32 @@ body{
     border-radius: 12px;
     padding: 12px;
 }
+
+
+/* Resaltar el error en el input */
+.input-warning {
+    border: 2px solid #ffcc00 !important;
+    outline: none;
+}
+
+/* Estilo para los mensajes de error/ayuda */
+.error-msg {
+    color: #d9534f;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Estilo visual para campos obligatorios usando pseudoclases */
+.calc-imc__input:required:invalid {
+    border-bottom: 3px solid #d9534f;
+}
+
+.calc-imc__input:required:valid {
+    border-left: 3px solid #5cb85c;
+}
+
 
 .calc-imc__buttons{
     display: flex;
