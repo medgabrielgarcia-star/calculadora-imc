@@ -3,14 +3,14 @@
 > Herramienta de educación en salud que combina lógica médica con una experiencia de usuario dinámica y accesible.
 
 <p align="center">
-  <img src="./src/assets/images/Calculadora-imc-grande.png" alt="Nexamed Escritorio" width="600"/>
+  <img src="./docs/assets/images/Calculadora-imc-grande.png" alt="Nexamed Escritorio" width="600"/>
 </p>
 
 ---
 
 ## ¿Qué es Nexamed?
 
-Nexamed es una calculadora de Índice de Masa Corporal (IMC) diseñada con foco en la educación preventiva. Va más allá del simple cálculo numérico: ofrece visualización analógica, retroalimentación personalizada y un asistente virtual que acompaña al usuario con consejos contextuales.
+Nexamed es una calculadora de Índice de Masa Corporal (IMC) diseñada con foco en la educación preventiva. Va más allá del simple cálculo numérico: ofrece visualización analógica, retroaloimentación personalizada y un asistente virtual que acompaña al usuario con consejos contextuales.
 
 <a href="https://medgabrielgarcia-star.github.io/calculadora-imc/">
 
