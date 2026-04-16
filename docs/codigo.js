@@ -92,19 +92,6 @@ if (botonLimpiar) {
     });
 }
 
-inputAltura.addEventListener('input', (e) => {
-    const valor = parseFloat(e.target.value);
-
-    // Lógica: Si el usuario escribe más de 3 (ej. 160 cm), avisar
-    if (valor > 3) {
-        errorAltura.textContent = "⚠️ ¿Usaste centímetros? Intenta con metros (ej: 1.70)";
-        inputAltura.classList.add('input-warning');
-    } else {
-        errorAltura.textContent = "";
-        inputAltura.classList.remove('input-warning');
-    }
-});
-
 
 // 3. Evento Limpiar (Reset)
 if (botonLimpiar) {
