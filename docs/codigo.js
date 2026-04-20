@@ -1,22 +1,20 @@
-// 1. Selección de elementos
 const formulario = document.querySelector(".calc-imc__formulario");
 const peso = document.querySelector("#peso");
 const altura = document.querySelector("#altura");
 const resultado = document.querySelector(".calc-imc__output");
-const aguja = document.querySelector("#aguja"); // Asegúrate que tu SVG tenga id="aguja"
-const textoBurbuja = document.querySelector(".calc-imc__burbuja p"); // Selecciona el párrafo dentro de la burbuja
-const burbuja = document.querySelector(".calc-imc__burbuja"); // Selecciona el contenedor de la burbuja
+const aguja = document.querySelector("#aguja");
+const textoBurbuja = document.querySelector(".calc-imc__burbuja p");
+const burbuja = document.querySelector(".calc-imc__burbuja");
 const botonLimpiar = document.querySelector("button[type='reset']");
 const errorAltura = document.getElementById('error-altura');
 
-// 2. Evento Principal (Calcular)
+
 formulario.addEventListener("submit", function(event) {
     event.preventDefault();
 
     const pesoUser = parseFloat(peso.value);
     const alturaUser = parseFloat(altura.value);
 
-    // Quitamos la clase de alerta por si estaba de un cálculo anterior
     burbuja.classList.remove("is-invalid");
 
     if (pesoUser > 0 && alturaUser > 0) {
@@ -24,7 +22,6 @@ formulario.addEventListener("submit", function(event) {
         const infoImc = clasificarimc(imc);
         const datosPesoIdeal = calcularPesoIdeal(alturaUser);
 
-        // --- Lógica de la Aguja ---
         let grados = 0;
         if (imc < 18.5) {
             grados = -75;
@@ -42,14 +39,13 @@ formulario.addEventListener("submit", function(event) {
 
         aguja.style.transform = `rotate(${grados}deg)`;
 
-        // --- Actualizar Resultados en Pantalla ---
         resultado.innerHTML = `Tu IMC es: <b>${imc.toFixed(2)}</b> <br>
                                Tu clasificación es: <b>${infoImc.texto}</b>`;
         resultado.style.color = infoImc.clase;
 
         // --- Lógica de Confetis y Burbuja ---
         if (imc < 18.5) {
-            textoBurbuja.innerHTML = `Tu IMC es algo bajo (<b>${imc.toFixed(1)}</b>). Un peso más saludable para ti sería de <b>${datosPesoIdeal.ideal} kg</b>.`;
+            textoBurbuja.innerHTML = `Tu IMC es algo bajo. Un peso más saludable para ti sería de <b>${datosPesoIdeal.ideal} kg</b>.`;
         } else if (imc < 24.9) {
             // ¡CELEBRACIÓN! Lanzamos confetis
             // Verificamos si la librería está cargada
@@ -63,10 +59,10 @@ formulario.addEventListener("submit", function(event) {
             }
             textoBurbuja.innerHTML = `<b>¡Felicidades!</b> Estás en tu peso ideal. Mantente entre los <b>${datosPesoIdeal.min}</b> y <b>${datosPesoIdeal.max} kg</b>.`;
         } else if (imc < 29.9) {
-            textoBurbuja.innerHTML = `Tu IMC es de <b>${imc.toFixed(1)}</b> (Sobrepeso). Un peso ideal sería acercarse a los <b>${datosPesoIdeal.ideal} kg</b>.`;
+            textoBurbuja.innerHTML = `Tu IMC indica Sobrepeso. Un peso ideal sería acercarse a los <b>${datosPesoIdeal.ideal} kg</b>.`;
         } else {
             // ALERTA (Puedes agregar una clase CSS para parpadeo rojo si quieres)
-            textoBurbuja.innerHTML = `Tu IMC indica obesidad (<b>${imc.toFixed(1)}</b>). Un peso saludable para tu altura es cerca de <b>${datosPesoIdeal.ideal} kg</b>.`;
+            textoBurbuja.innerHTML = `Tu IMC indica obesidad. Un peso saludable para tu altura es cerca de <b>${datosPesoIdeal.ideal} kg</b>.`;
         }
 
     } else {
@@ -76,6 +72,8 @@ formulario.addEventListener("submit", function(event) {
         textoBurbuja.textContent = "Por favor, ingresa valores válidos para poder ayudarte.";
     }
 });
+
+
 
 // 3. Evento Limpiar (Reset)
 if (botonLimpiar) {
