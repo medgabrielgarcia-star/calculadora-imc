@@ -40,7 +40,7 @@ formulario.addEventListener("submit", function(event) {
         aguja.style.transform = `rotate(${grados}deg)`;
 
         resultado.innerHTML = `Tu IMC es: <b>${imc.toFixed(2)}</b> <br>
-                               Tu clasificación es: <b>${infoImc.texto}</b>`;
+                            Tu clasificación es: <b>${infoImc.texto}</b>`;
         resultado.style.color = infoImc.clase;
 
         // --- Lógica de Confetis y Burbuja ---
@@ -59,10 +59,10 @@ formulario.addEventListener("submit", function(event) {
             }
             textoBurbuja.innerHTML = `<b>¡Felicidades!</b> Estás en tu peso ideal. Mantente entre los <b>${datosPesoIdeal.min}</b> y <b>${datosPesoIdeal.max} kg</b>.`;
         } else if (imc < 29.9) {
-            textoBurbuja.innerHTML = `Tu IMC es alto indica Sobrepeso. Un peso ideal sería acercarse a los <b>${datosPesoIdeal.ideal} kg</b>.`;
+            textoBurbuja.innerHTML = `Tu IMC es alto indica <b>Sobrepeso.</b> Un peso ideal sería acercarse a los <b>${datosPesoIdeal.ideal} kg</b>.`;
         } else {
             // ALERTA (Puedes agregar una clase CSS para parpadeo rojo si quieres)
-            textoBurbuja.innerHTML = `Tu IMC es muy alto indica obesidad. Un peso saludable para tu altura es cerca de <b>${datosPesoIdeal.ideal} kg</b>.`;
+            textoBurbuja.innerHTML = `Tu IMC es muy alto indica <b>obesidad.</b> Un peso saludable para tu altura es cerca de <b>${datosPesoIdeal.ideal} kg</b>.`;
         }
 
     } else {
