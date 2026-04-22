@@ -59,10 +59,10 @@ formulario.addEventListener("submit", function(event) {
             }
             textoBurbuja.innerHTML = `<b>¡Felicidades!</b> Estás en tu peso ideal. Mantente entre los <b>${datosPesoIdeal.min}</b> y <b>${datosPesoIdeal.max} kg</b>.`;
         } else if (imc < 29.9) {
-            textoBurbuja.innerHTML = `Tu IMC indica Sobrepeso. Un peso ideal sería acercarse a los <b>${datosPesoIdeal.ideal} kg</b>.`;
+            textoBurbuja.innerHTML = `Tu IMC es alto indica Sobrepeso. Un peso ideal sería acercarse a los <b>${datosPesoIdeal.ideal} kg</b>.`;
         } else {
             // ALERTA (Puedes agregar una clase CSS para parpadeo rojo si quieres)
-            textoBurbuja.innerHTML = `Tu IMC indica obesidad. Un peso saludable para tu altura es cerca de <b>${datosPesoIdeal.ideal} kg</b>.`;
+            textoBurbuja.innerHTML = `Tu IMC es muy alto indica obesidad. Un peso saludable para tu altura es cerca de <b>${datosPesoIdeal.ideal} kg</b>.`;
         }
 
     } else {
