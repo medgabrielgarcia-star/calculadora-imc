@@ -101,7 +101,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh; /* Ocupa el alto de la pantalla */
 }
 
@@ -117,21 +117,21 @@ body{
 /* HEADER */
 .calc-imc__header{
     display: flex;
-  flex-direction: column; /* MOBILE */
-  align-items: center;
-  gap: 10px;
-  padding: 30px;
-  padding-bottom: 40px;
+    flex-direction: column; /* MOBILE */
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    padding-bottom: 40px;
     background: linear-gradient(180deg, var(--color-bg-main-card) 0%, var(--color-bg-header) 100%);
 }
 
 @media (min-width: 768px){
-  .calc-imc__header{
+.calc-imc__header{
     flex-direction: row;
     justify-content: space-around;
     gap: 20px;
     padding: 30px;
-  }
+}
 }
 
 .calc-imc__title{
@@ -145,11 +145,11 @@ body{
 /* MAIN */
 
 .calc-imc__main{
-  display: flex;
-  flex-direction: column; /* MOBILE BASE */
-  align-items: center;
-  gap: 20px;
-  padding: 30px;
+    display: flex;
+    flex-direction: column; /* MOBILE BASE */
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
 }
 
 @media (min-width: 768px){
@@ -158,8 +158,7 @@ body{
     justify-content: space-around;
     flex:1;
     gap: 20px;
-    padding: 30px;
-  }
+    padding: 30px;}
 }
 
 
