@@ -1,0 +1,695 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src:
+        url("./assets/fonts/montserrat/montserrat-v31-latin-500italic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src:
+        url("./assets/fonts/montserrat/montserrat-v31-latin-500.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal ;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src:
+        url("./assets/fonts/montserrat/montserrat-v31-latin-900.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Montserrat";
+    src:
+        url("./assets/fonts/montserrat/montserrat-v31-latin-900italic.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Lato";
+    src:
+        url("./assets/fonts/lato/lato-v25-latin-regular.woff2") format("woff2");
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Lato";
+    src:
+        url("./assets/fonts/lato/lato-v25-latin-italic.woff2") format("woff2");
+    font-style: italic;
+}
+
+:root {
+    --color-primary-50:  #EFF6FF;
+    --color-primary-100: #DBEAFE;
+    --color-primary-300: #93C5FD;
+    --color-primary-500: #2563EB;
+    --color-primary-600: #1D4ED8;
+    --color-primary-700: #1E40AF;
+
+    --color-secondary-100: #F3E8FF;
+    --color-secondary-300: #C4B5FD;
+    --color-secondary-500: #7C3AED;
+    --color-secondary-600: #6D28D9;
+
+    /* Fondos */
+    --color-bg-header: #f8faff;
+    --color-bg-main: #ebf0f7;
+    --color-bg-main-card: #FFFFFF;;
+    --color-bg-footer: #0F172A;
+
+    /* Textos */
+    --color-title: #0F172A;
+    --color-text-base: #334155;
+    --color-label: #1e293b;
+
+    /* Acentos y Botones */
+    --color-primary: var(--color-primary-500);
+    --color-primary-hover: var(--color-primary-600);
+    --color-secondary: var(--color-secondary-500);
+    --color-secondary-hover:var(--color-secondary-600);
+
+     /* 📊 IMC STATES (CLAVE UX) */
+
+    --color-imc-low: #6FA4C6;           /* BAJO (Azul medio suave) */
+    --color-imc-normal: #1b4332;        /* NORMAL (Azul cielo claro) */
+    --color-imc-overweight: #513c06;    /* SOBREPESO (Naranja ámbar) */
+    --color-imc-obese-i: #660000;       /* GRADO I (Naranja oscuro/base) */
+    --color-imc-obese-ii: #DD862C;      /* GRADO II (Naranja muy saturado) */
+    --color-imc-obese-iii: #CB5A0C;     /* GRADO III (Rojo anaranjado intenso) */
+    --color-imc-morbid: #BB3929;        /* OBESIDAD MÓRBIDA (Rojo terracota profundo) */
+
+    /* Detalles */
+    --color-border: #E2E8F0;
+    --color-link: var(--color-secondary-300);
+    --color-footer-text: #CBD5F5;
+
+    /* Sombras */
+    --color-shadow: #0002;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-bg-main);
+}
+
+/* =========================
+HEADER
+========================= */
+
+.calc-imc__header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    background: linear-gradient(
+        180deg,
+        var(--color-bg-main-card) 0%,
+        var(--color-bg-header) 100%
+    );
+    border-bottom: 1px solid var(--color-border);
+    width: 100%;
+}
+
+
+.calc-imc__logo{
+    width: 90px;
+    height: auto;
+    filter: drop-shadow(0 0 1px var(--color-shadow));
+}
+
+.calc-imc__title{
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    line-height: 1.1;
+    color: var(--color-title);
+    width: 50vw;
+}
+
+/* =========================
+MAIN
+========================= */
+
+.calc-imc__main{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* LAPTOP FIRST */
+    grid-template-columns: 320px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* =========================
+LEFT / RIGHT
+========================= */
+
+.calc-imc__left,
+.calc-imc__right{
+    width: 100%;
+    height: 100%;
+}
+
+.calc-imc__left{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.calc-imc__right{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* =========================
+CARD DOCTOR
+========================= */
+
+.calc-imc__dr-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.calc-imc__burbuja{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    padding: 12px 18px;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    z-index: 10;
+}
+
+.calc-imc__burbuja::after{
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #eeeeee transparent transparent;
+}
+
+.calc-imc__dr-image{
+    width: 240px;
+
+    height: auto;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.calc-imc__left-second{
+    width: 100%;
+}
+
+.calc-imc__formulario{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background-color: var(--color-bg-main-card);
+
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.calc-imc__input{
+    width: 100%;
+
+    border: none;
+
+    outline: 1px solid var(--color-border);
+
+    border-radius: 12px;
+
+    padding: 14px 16px;
+
+    transition: outline 0.3s ease;
+}
+
+.calc-imc__input:required:invalid{
+    border-bottom: 3px solid #d9534f;
+}
+
+.calc-imc__input:required:valid{
+    border-left: 3px solid #5cb85c;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+.calc-imc__buttons{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.calc-imc__button-items{
+    width: 100%;
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 15px 20px;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.calc-imc__button-items:hover{
+    transform: translateY(-2px);
+}
+
+.calc-imc__button-items:active{
+    transform: scale(0.97);
+}
+
+.calcular{
+    background-color: var(--color-primary);
+}
+
+.calcular:hover{
+    background-color: var(--color-primary-hover);
+}
+
+.limpiar{
+    background-color: var(--color-secondary);
+}
+
+.limpiar:hover{
+    background-color: var(--color-secondary-hover);
+}
+
+/* =========================
+RESULT CARD
+========================= */
+
+.calc-imc__result{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+    border-radius: 24px;
+    background-color: #ffffff;
+    border: 1px solid #dfe3f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* =========================
+GAUGE
+========================= */
+
+.calc-imc__gauge{
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================
+RESULT BOX
+========================= */
+
+.calc-imc__resultados{
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #cfd3e4;
+    border-radius: 20px;
+    background-color: #f8f8ff;
+    flex-direction: column;
+    gap: 5px;
+    color: #555;
+}
+
+/* =========================
+OUTPUT
+========================= */
+
+.calc-imc__resultados p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.calc-imc__output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.calc-imc__output{
+    text-align: center;
+    font-size: 3rem;
+    color: #6b7280;
+}
+
+.calc-imc__peso-ideal{
+    text-align: center;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* =========================
+RANGE CARDS
+========================= */
+
+.calc-imc__rango{
+    width: 100%;
+    display: grid;
+    /* En lugar de 1fr, usamos minmax para que no se estiren infinitamente */
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+    gap: 20px;
+    /* Centra las 3 tarjetas como un bloque dentro del contenedor */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* =========================
+RANGE ITEMS
+========================= */
+
+.calc-imc__rango-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 120px;
+    padding: 20px 25px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        color 0.3s ease;
+
+    p{
+        text-align: center;
+    }
+}
+
+.calc-imc__rango-items:hover{
+    transform: translateY(-5px);
+}
+
+.normal-title,.sobrepeso-title,.obesidad-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-normal,.icon-obesidad,.icon-sobrepeso{
+    width: 25px;
+}
+
+
+.activo-normal {
+    background-color: #eefaf1;
+    color: #1b4332;
+    transform: scale(1.05);
+
+}
+
+.activo-sobrepeso {
+    background-color: #fff9e6;
+    color: #513c06;
+    transform: scale(1.05);
+
+}
+
+.activo-obesidad {
+    background-color: #ffeded;
+    color: #660000
+    transform: scale(1.05);
+}
+
+
+/* =========================
+COLORS
+========================= */
+
+.normal{
+    border-left: 6px solid #5cd079;
+}
+
+.sobrepeso{
+    border-left: 6px solid #ffc107;
+}
+
+.obesidad{
+    border-left: 6px solid #ff4d4d;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.calc-imc__footer{
+    width: 100%;
+    background-color: var(--color-bg-footer);
+    color: var(--color-footer-text);
+    margin: 0;
+}
+
+.calc-imc__footer-content{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.calc-imc__disclaimer{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.calc-imc__resources{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calc-imc__resources ul{
+    list-style: none;
+    padding: 0;
+}
+
+.calc-imc__resources a{
+    text-decoration: none;
+    color: var(--color-link);
+}
+
+.calc-imc__resources a:hover{
+    text-decoration: underline;
+}
+
+.calc-imc__socials{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-imc__ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+}
+
+.calc-imc__icon{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.calc-imc__icon:hover{
+    color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+.calc-imc__copyright{
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 992px){
+
+    .calc-imc__header{
+        width: 100%;
+    }
+
+
+    .calc-imc__main{
+        grid-template-columns: 320px 1fr;
+        gap: 25px;
+        padding: 30px 20px;
+        width: 100%
+    }
+
+    .calc-imc__result{
+        padding: 30px;
+    }
+    /* Mantenemos el grid de 2 columnas */
+    .calc-imc__rango {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 700px; /* Evita que las tarjetas se estiren demasiado */
+        margin: 0 auto;   /* Centra todo el bloque de rangos */
+
+    /* TRUCO: Seleccionamos la tercera tarjeta (Obesidad) */
+    .calc-imc__rango-items:nth-child(3) {
+        /* Le decimos que empiece en la columna 1 y ocupe 2 espacios (toda la fila) */
+        grid-column: 1 / span 2;
+
+        /* Opcional: Si no quieres que sea tan ancha, puedes centrarla ella misma */
+        justify-self: center;
+        width: 50%; /* O el ancho que prefieras para que combine con las de arriba */
+    }
+}
+
+    .calc-imc__footer-content{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%
+    }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (min-width: 320px) and (max-width: 576px){
+
+    .calc-imc__header{
+        flex-direction: column;
+        text-align: center;
+        width: 100%
+    }
+
+    .calc-imc__main{
+        grid-template-columns: 1fr;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .calc-imc__formulario{
+        padding: 20px;
+    }
+
+    .calc-imc__result{
+        padding: 20px;
+    }
+
+    .calc-imc__rango{
+        grid-template-columns: 1fr;
+    }
+
+    .calc-imc__gauge{
+        max-width: 100%;
+    }
+
+    .calc-imc__footer{
+        width: 100%;
+    }
+
+    .calc-imc__footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .calc-imc__disclaimer,
+    .calc-imc__resources,
+    .calc-imc__socials{
+        width: 100%;
+    }
+
+}
+

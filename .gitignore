@@ -1,0 +1,21 @@
+# Extensiones de sistema (Archivos basura)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuraciones de editores de código
+.vscode/
+.idea/
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# Dependencias (En caso de que luego uses npm o similares)
+node_modules/
+dist/
+build/
+
+# Logs y temporales
+*.log
+.tmp/
+.cache/
