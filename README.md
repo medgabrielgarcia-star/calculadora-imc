@@ -4,16 +4,16 @@
 
 <p align="center">
 <figure>
-  <img src="./assets/images/captura-laptop-calculadora-imc.webp" alt="Vista laptop" width="500" height="auto"/>
-  <figcaption>imagen 1. Vista Laptop</figcaption>
+  <img src="./assets/images/captura-laptop-calculadora-imc.webp" alt="Vista laptop" width="400" height="auto"/>
+  <figcaption>Imagen 1. Vista Laptop</figcaption>
   </figure>
   <figure>
-  <img src="./assets/images/captura-tablet-calculadora-imc.webp" alt="Vista tablet" width="400" height="auto"/>
-  <figcaption>imagen 2. Vista Tablet</figcaption>
+  <img src="./assets/images/captura-tablet-calculadora-imc.webp" alt="Vista tablet" width="300" height="auto"/>
+  <figcaption>Imagen 2. Vista Tablet</figcaption>
   </figure>
   <figure>
-  <img src="./assets/images/captura-movil-calculadora-imc.webp" alt="vista movil" width="300" height="auto"/>
-  <figcaption>imagen 3. Vista Movil</figcaption>
+  <img src="./assets/images/captura-movil-calculadora-imc.webp" alt="vista movil" width="100" height="auto"/>
+  <figcaption>Imagen 3. Vista Movil</figcaption>
   </figure>
 </p>
 
