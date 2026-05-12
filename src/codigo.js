@@ -141,9 +141,6 @@ if (botonLimpiar) {
         resultados.textContent =
             "Tus resultados aparecerán aquí una vez que ingreses tus datos.";
         resultados.style.color = "#555";
-        iconNormal.style.fill = "";
-        iconObesidad.style.fill = "";
-        iconSobrepeso.style.fill = "";
 
     });
 }
