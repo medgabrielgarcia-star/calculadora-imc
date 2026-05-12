@@ -3,9 +3,9 @@
 > Herramienta de educación en salud que combina lógica médica con una experiencia de usuario dinámica y accesible.
 
 <p align="center">
-  <img src="./assets/images/captura-laptop-calculadora-imc.webp" alt="Vista laptop" width="600"/>
-  <img src="./assets/images/captura-tablet-calculadora-imc.webp" alt="Vista tablet" width="600"/>
-  <img src="./assets/images/captura-movil-calculadora-imc.webp" alt="vista movil" width="600"/>
+  <img src="./assets/images/captura-laptop-calculadora-imc.webp" alt="Vista laptop" width="400"/>
+  <img src="./assets/images/captura-tablet-calculadora-imc.webp" alt="Vista tablet" width="400"/>
+  <img src="./assets/images/captura-movil-calculadora-imc.webp" alt="vista movil" width="300"/>
 </p>
 
 ---
