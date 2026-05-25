@@ -458,9 +458,9 @@ RANGE ITEMS
     }
 }
 
-.calc-imc__rango-items:hover{
+/*.calc-imc__rango-items:hover{
     transform: translateY(-5px);
-}
+}*/
 
 .normal-title,.sobrepeso-title,.obesidad-title{
     display: flex;
