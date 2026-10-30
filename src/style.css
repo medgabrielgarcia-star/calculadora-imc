@@ -1,10 +1,3 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
 @font-face{
     font-family: "Montserrat";
     src:
@@ -99,6 +92,13 @@
     --color-shadow: #0002;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 html,
 body {
     margin: 0;
@@ -136,7 +136,7 @@ HEADER
 
 
 .calc-imc__logo{
-    width: 90px;
+    width: 200px;
     height: auto;
     filter: drop-shadow(0 0 1px var(--color-shadow));
 }
@@ -489,7 +489,7 @@ RANGE ITEMS
 
 .activo-obesidad {
     background-color: #ffeded;
-    color: #660000
+    color: #660000;
     transform: scale(1.05);
 }
 
